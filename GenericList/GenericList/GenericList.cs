@@ -4,10 +4,10 @@ using System.Collections;
 
 namespace GenericList
 {
-    class GenericList<T> : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IList, ICollection, IReadOnlyList<T>, IReadOnlyCollection<T>
+  public  class GenericList<T> : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IList, ICollection, IReadOnlyList<T>, IReadOnlyCollection<T>
     {
         int index;
-        const int size = 2;
+        const int size = 0;
         static int pov = 2;
         static int currentValue = (int)Math.Pow(size, pov);
 
@@ -79,7 +79,7 @@ namespace GenericList
         public void Add(T item)
         {
             int i = array.Length;
-            Array.Resize(ref array, i++);
+            Array.Resize(ref array, i+1);
             array[i] = item;
         }
 
